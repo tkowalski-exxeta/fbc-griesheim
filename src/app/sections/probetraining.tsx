@@ -12,10 +12,21 @@ export function Probetraining() {
           <h2>Haben wir dein Interesse geweckt?</h2>
           <p>
             Wenn ja, dann solltest du unbedingt einen Termin für ein
-            Probetraining vereinbaren. Anmeldungen bitte per E-Mail an unseren
-            2.Vorsitzenden Ralf Müller. Anmeldungen von Jugendlichen bitte über
-            den Jugendwart (f) Conny Oldfield. Einfach auf das Icon unterhalb
-            des Namens klicken, oder das Kontaktformular ausfüllen.
+            Probetraining vereinbaren.
+          </p>
+          <ul className="my-4">
+            <li>
+              Anmeldungen bitte per E-Mail an unseren 2.Vorsitzenden Ralf
+              Müller.
+            </li>
+            <li>
+              Anmeldungen von Jugendlichen bitte über den Jugendwart (f) Conny
+              Oldfield.
+            </li>
+          </ul>
+          <p>
+            nfach auf das Icon unterhalb des Namens klicken, oder das
+            Kontaktformular ausfüllen.
           </p>
         </section>
         <section className="right flex-1">
