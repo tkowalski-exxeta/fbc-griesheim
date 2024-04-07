@@ -1,7 +1,7 @@
 export function UnserVerein() {
   return (
     <section aria-label="Unser Version">
-      <h1 className="text-3xl mt-12 mb-2">Unser Verein</h1>
+      <h1 className="text-3xl mb-2">Unser Verein</h1>
       <p>
         Gegründet wurde der 1. Feldbogen-Sport-Club Griesheim e.V. im Jahre
         1985. Seine sportliche Heimat fand der Verein mit dem Abschluß eines

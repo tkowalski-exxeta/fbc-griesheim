@@ -1,9 +1,9 @@
 export function Trainingszeiten() {
   return (
     <section aria-label="Trainingszeiten">
-      <h1 className="text-2xl mt-12">Trainingszeiten</h1>
+      <h1 className="text-2xl mb-8">Trainingszeiten</h1>
 
-      <table className="mx-auto border-spacing-8">
+      <table className="">
         <tbody>
           <tr>
             <th></th>
@@ -12,7 +12,11 @@ export function Trainingszeiten() {
           </tr>
 
           <tr>
-            <th>Sommer</th>
+            <th>
+              Sommer
+              <br />
+              (auf dem Vereinsgelände)
+            </th>
 
             <td className="p-4 text-center">
               Mittwoch
@@ -28,7 +32,11 @@ export function Trainingszeiten() {
           </tr>
 
           <tr>
-            <th>Winter</th>
+            <th>
+              Winter
+              <br />
+              (in der Horst-Schmidt-Halle)
+            </th>
 
             <td className="p-4 text-center">
               Sonntag

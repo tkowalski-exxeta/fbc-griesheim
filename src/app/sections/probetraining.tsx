@@ -1,7 +1,7 @@
 import Image from "next/image";
 import conny from "../img/conni.jpg";
 import ralf from "../img/ralf.jpg";
-import { relative } from "path";
+import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export function Probetraining() {
   return (
@@ -19,39 +19,50 @@ export function Probetraining() {
           </p>
         </section>
         <section className="right flex-1">
-          <div className="flex flex-row gap-4">
-            <div className="flex-1">
-              <div style={{ height: 300, width: 240, position: "relative" }}>
-                <Image
-                  src={ralf}
-                  fill
-                  alt="2.Vorsitzender - Ralf Müller"
-                  className="object-cover"
-                />
-              </div>
-              <div>Ralf Müller</div>
-              <div>2.Vorsitzender</div>
-              <div>
-                <a href="mailto:2.vorsitz@fbc-griesheim.de">
-                  <i className="fas fa-envelope"></i>
-                </a>
-              </div>
-            </div>
-            <div className="flex-1">
-              <div style={{ height: 300, width: 240, position: "relative" }}>
-                <Image
-                  src={conny}
-                  fill
-                  alt="Jugendwart (f) - Conny Oldfield"
-                  className="object-cover"
-                />
-              </div>
-              <div>Conny Oldfield</div>
-              <div>Jugendwart (f)</div>
-            </div>
+          <div className="flex flex-row gap-4 w-min">
+            <Portrait
+              name="Ralf Müller"
+              role="2.Vorsitzender"
+              email="2.vorsitz@fbc-griesheim.de"
+              img={ralf}
+            />
+            <Portrait
+              name="Conny Oldfield"
+              role="Jugendwart (f)"
+              email="jugend@fbc-griesheim.de"
+              img={conny}
+            />
           </div>
         </section>
       </div>
     </section>
+  );
+}
+
+interface PortraitProps {
+  name: string;
+  role: string;
+  email: string;
+  img: StaticImport;
+}
+function Portrait({ name, role, email, img }: PortraitProps) {
+  return (
+    <div>
+      <div style={{ height: 300, width: 240, position: "relative" }}>
+        <Image
+          src={img}
+          fill
+          alt={`${role} - ${name}`}
+          className="object-cover"
+        />
+      </div>
+      <div className="text-xl">{name}</div>
+      <div className="text-slate-600 border-b-2 border-orange-700">{role}</div>
+      <div>
+        <a href={"mailto:" + email}>
+          <i className="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
   );
 }

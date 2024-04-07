@@ -1,16 +1,10 @@
-import Image from "next/image";
-import bg from "./img/background.jpg";
-import conny from "./img/conni.jpg";
-import logo from "./img/fbc-logo.jpg";
-import ralf from "./img/ralf.jpg";
-
 const navLinks = [
-  { href: "#home", text: "Home" },
-  { href: "#news", text: "Aktuelles" },
-  { href: "#hallenmeisterschaft", text: "Hallenmeisterschaft" },
-  { href: "#contact", text: "Kontakt" },
-  { href: "#about-us", text: "Über uns" },
-  { href: "#about", text: "Termine" },
+  { href: "/", text: "Home" },
+  { href: "/news", text: "Aktuelles" },
+  { href: "/hallenmeisterschaft", text: "Hallenmeisterschaft" },
+  { href: "/contact", text: "Kontakt" },
+  { href: "/about-us", text: "Über uns" },
+  { href: "/about", text: "Termine" },
 ];
 
 export const Navbar = () => {
@@ -20,7 +14,7 @@ export const Navbar = () => {
         <ul className="list-none">
           {navLinks.map((link) => (
             <li key={link.href} className="inline-block p-4 hover:bg-slate-600">
-              {link.text}
+              <a href={link.href}>{link.text}</a>
             </li>
           ))}
         </ul>

@@ -11,10 +11,16 @@ export default function Home() {
     <main>
       <HeroSection />
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto py-8">
         <UnserVerein />
-        <LocationSection />
-        <Trainingszeiten />
+        <div className="flex flex-row my-8">
+          <div className="flex-1">
+            <Trainingszeiten />
+          </div>
+          <div className="flex-1">
+            <LocationSection />
+          </div>
+        </div>
         <Probetraining />
       </div>
     </main>
